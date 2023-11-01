@@ -4,12 +4,12 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f0f0f0;
+    background: transparent; /* Changed to transparent */
 }
 
 .clock-container {
     text-align: center;
-    /* Removed the background gradient */
+    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Re-added the gradient background */
     border-radius: 50%;
     width: 250px;
     height: 250px;
@@ -21,7 +21,7 @@ body, html {
 }
 
 .greeting, .clock, .date {
-    color: black; /* Changed text color to black for visibility */
+    color: white; /* Changed text color back to white for visibility */
     font-family: Arial, sans-serif;
     margin-bottom: 15px; /* Increased spacing between lines */
 }
