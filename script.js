@@ -10,6 +10,16 @@ function updateTime() {
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+    let greeting;
+    if (hours < 12) {
+        greeting = "Good Morning";
+    } else if (hours < 18) {
+        greeting = "Good Afternoon";
+    } else {
+        greeting = "Good Evening";
+    }
+
+    document.querySelector('.greeting').innerText = greeting;
     document.querySelector('.clock').innerText = hours + ':' + minutes + ' ' + ampm;
     // Removed the year from the date display
     document.querySelector('.date').innerText = `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}`;
@@ -17,3 +27,4 @@ function updateTime() {
 
 setInterval(updateTime, 1000);
 updateTime();
+
