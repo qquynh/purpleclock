@@ -1,0 +1,36 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+}
+
+.clock-container {
+    text-align: center;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.greeting, .clock, .date {
+    color: white;
+    font-family: Arial, sans-serif;
+    margin-bottom: 15px; /* Increased spacing between lines */
+}
+
+.clock {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.date {
+    font-size: 18px;
+}
