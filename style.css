@@ -9,7 +9,7 @@ body, html {
 
 .clock-container {
     text-align: center;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    /* Removed the background gradient */
     border-radius: 50%;
     width: 250px;
     height: 250px;
@@ -21,7 +21,7 @@ body, html {
 }
 
 .greeting, .clock, .date {
-    color: white;
+    color: black; /* Changed text color to black for visibility */
     font-family: Arial, sans-serif;
     margin-bottom: 15px; /* Increased spacing between lines */
 }
