@@ -11,20 +11,24 @@ function updateTime() {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     let greeting;
-    if (hours < 12) {
-        greeting = "Good Morning";
-    } else if (hours < 18) {
-        greeting = "Good Afternoon";
+    const originalHour = now.getHours(); // 24-hour format
+
+    if (originalHour >= 5 && originalHour < 12) {
+        greeting = "Good Morning!";
+    } else if (originalHour >= 12 && originalHour < 18) {
+        greeting = "Hi There!";
+    } else if (originalHour >= 18 && originalHour < 21) {
+        greeting = "Good Evening!";
+    } else if (originalHour >= 21 && originalHour < 24) {
+        greeting = "Good Night!";
     } else {
-        greeting = "Good Evening";
+        greeting = "EY! It's late, go to bed!";
     }
 
     document.querySelector('.greeting').innerText = greeting;
     document.querySelector('.clock').innerText = hours + ':' + minutes + ' ' + ampm;
-    // Removed the year from the date display
     document.querySelector('.date').innerText = `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}`;
 }
 
 setInterval(updateTime, 1000);
 updateTime();
-
